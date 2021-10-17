@@ -18245,6 +18245,7 @@ with pkgs;
 
   opencl-clang = callPackage ../development/libraries/opencl-clang { };
 
+  openvg = callPackage ../development/libraries/openvg { };
   openvg-headers = callPackage ../development/libraries/openvg-headers { };
 
   mapnik = callPackage ../development/libraries/mapnik { };
