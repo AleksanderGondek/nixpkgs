@@ -29,13 +29,13 @@
 
   mariadb = stdenv.mkDerivation rec {
     pname = "mariadb-connector-odbc";
-    version = "3.1.4";
+    version = "3.1.13";
 
     src = fetchFromGitHub {
-      owner = "MariaDB";
+      owner = "mariadb-corporation";
       repo = "mariadb-connector-odbc";
       rev = version;
-      sha256 = "1kbz5mng9vx89cw2sx7gsvhbv4h86zwp31fr0hxqing3cwxhkfgw";
+      sha256 = "/k1W15v5JUc+eTz26qCl+41uIAlBvuwDGBvIikAgkFw=";
       # this driver only seems to build correctly when built against the mariadb-connect-c subrepo
       # (see https://github.com/NixOS/nixpkgs/issues/73258)
       fetchSubmodules = true;
