@@ -27253,6 +27253,7 @@ with pkgs;
   pybitmessage = callPackage ../applications/networking/instant-messengers/pybitmessage { };
 
   qarma = libsForQt5.callPackage ../tools/misc/qarma { };
+  qarmaForQt6 = libsForQt6.callPackage ../tools/misc/qarma-for-qt6 { };
 
   qbittorrent = libsForQt5.callPackage ../applications/networking/p2p/qbittorrent { };
   qbittorrent-nox = qbittorrent.override {
