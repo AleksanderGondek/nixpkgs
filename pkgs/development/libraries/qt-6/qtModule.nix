@@ -56,6 +56,11 @@ drv1 = mkDerivation (args // {
     ${args.preConfigure or ""}
 
     fixQtBuiltinPaths . '*.pr?'
+    echo "TEST TEST TEST"
+    echo "pwd: '$(pwd)'"
+    ls -alh 
+    mkdir -p ./cmake
+    cp ${./cmake/Qt6ShaderToolsMacros.cmake} ./cmake/Qt6ShaderToolsMacros.cmake
   '';
 
   dontWrapQtApps = args.dontWrapQtApps or true;

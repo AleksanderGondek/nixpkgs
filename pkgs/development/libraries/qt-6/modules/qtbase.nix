@@ -347,7 +347,7 @@ qtbaseDrv = stdenv.mkDerivation rec {
     "-sctp"
     "-libproxy"
     "-sqlite" "system"
-
+    "-enable-shadertools"
     "-gui"
     "-widgets"
     "-opengl desktop"

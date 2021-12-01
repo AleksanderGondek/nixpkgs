@@ -156,6 +156,7 @@ let
       qtwebview = callPackage ../modules/qtwebview.nix {
         inherit (darwin.apple_sdk.frameworks) CoreFoundation WebKit;
       };
+      qttest = callPackage ../modules/qttest.nix {};
 
       env = callPackage ../qt-env.nix {};
       full = env "qt-full-${qtbase.version}" ([
