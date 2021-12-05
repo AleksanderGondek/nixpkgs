@@ -1,5 +1,6 @@
 { symlinkJoin
 , qtbase
+, qtdeclarative
 , qtshadertools
 }:
 
@@ -8,6 +9,9 @@ symlinkJoin {
   paths = [
     qtbase
     qtbase.dev
+    qtdeclarative
+    qtdeclarative.dev
+    qtdeclarative.bin
     qtshadertools
     qtshadertools.dev
   ];

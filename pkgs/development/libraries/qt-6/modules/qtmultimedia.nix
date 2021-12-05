@@ -18,7 +18,7 @@
 
 qtModule {
   pname = "qtmultimedia";
-  qtInputs = [ qttest qtdeclarative ];
+  qtInputs = [ qttest ];
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ gstreamer gst-plugins-base libpulseaudio 
     pcre.dev pcre.out pcre.bin libGL 
@@ -32,7 +32,5 @@ qtModule {
   qmakeFlags = [ "GST_VERSION=1.0" ];
   NIX_LDFLAGS = lib.optionalString stdenv.isDarwin "-lobjc";
   postFixup = ''
-    echo "AAAAAAAA"
-    ls -alh
   '';
 }

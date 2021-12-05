@@ -69,6 +69,22 @@ qtModule {
         done
     fi
 
+    # Force bin dir to appear in dev output
+    # This ensures the qml modules are able to be properly
+    # created if qtdeclarative is added as dep of other module
+    # (i.e. qtmultimedia will be built without qml without this change)
+    echo "Ensuring bin dir is also present in -dev..."
+    {
+      echo 'mkdir $dev/bin'
+      mkdir $dev/bin
+      echo 'done'
+    } || true
+    {
+      echo 'cp $out/bin/* $dev/bin/'
+      cp $out/bin/* $dev/bin/
+      echo 'done'
+    } || true
+
     # TODO refactor. same code in qtbase.nix and qtModule.nix
     echo "patching output paths in cmake files ..."
     (
