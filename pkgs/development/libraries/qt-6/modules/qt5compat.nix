@@ -6,10 +6,11 @@
 # FIXME Configure summary: qt5compat is not using libiconv. bug in qt6?
 , icu
 , openssl
+, qttest
 }:
 
 qtModule {
   pname = "qt5compat";
-  qtInputs = [ qtbase qtdeclarative ];
+  qtInputs = [ qttest ];
   buildInputs = [ libiconv icu openssl openssl.dev libglvnd libxkbcommon vulkan-headers ];
 }
