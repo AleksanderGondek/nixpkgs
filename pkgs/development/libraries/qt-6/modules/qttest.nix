@@ -2,6 +2,7 @@
 , qtbase
 , qtdeclarative
 , qtshadertools
+, qtsvg
 }:
 
 symlinkJoin {
@@ -14,6 +15,9 @@ symlinkJoin {
     qtdeclarative.bin
     qtshadertools
     qtshadertools.dev
+    qtsvg
+    qtsvg.dev
+    qtsvg.bin
   ];
 }
 
