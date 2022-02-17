@@ -1,7 +1,7 @@
 { callPackage, texinfo, perl }:
 
 callPackage ./common.nix {} {
-  pname = "glibc-info";
+  name = "glibc-info";
 
   outputs = [ "out" ];
 
